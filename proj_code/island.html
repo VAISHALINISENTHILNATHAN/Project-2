@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+*{margin: 0;padding: 0;}
+body{height: 100vh;background-size: cover;background-position: center;}
+.filterDiv {
+  float: left;
+  background-color:#3399ff;
+  color:white;
+  font-size: 20px;
+  font-weight: bolder;
+  width:200px ;
+  line-height: 100px;
+  text-align: center;
+  margin:10px;
+  display: none;
+}
+
+.show {
+  display:block;
+}
+
+.container {
+  margin-top:300px;
+  margin-left: 100px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  margin-left: 30%;
+  border:50px;
+  outline:black;
+  padding: 20px 40px;
+  background-color:white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bolder;
+
+}
+
+.btn:hover {
+  background-color: #f1f1f1; ;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+<body background="F:\sublime\mini project 2\bg7.jpg">
+
+<BR><BR><BR>
+<li><a href="main.html"><span style="color:red;float: left;margin-left: 25px;font-size: 30px;font-weight: bolder;font-style: italic;">GLOBAL TOURISMS</span></a></li>
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('is')">ISLANDS</button>
+</div>
+ 
+<div class="container">
+  <div class="filterDiv is"><a href="and.html"><span style="color:white;font-weight: bolder;">ANDAMAN ISLANDS</span></a></div>
+  <div class="filterDiv is"><a href="bali.html"><span style="color:white;font-weight: bolder;">BALI</span></a></div>
+  <div class="filterDiv is"><a href="mal.html"><span style="color:white;font-weight: bolder;">MALDIVES</span></a></div>
+  <div class="filterDiv is"><a href="santo.html"><span style="color:white;font-weight: bolder;">SANTORINI</span></a></div>
+  <div class="filterDiv is"><a href="hawa.html"><span style="color:white;font-weight: bolder;">ISLAND OF HAWAII</span></a></div>
+  <div class="filterDiv is"><a href="vanco.html"><span style="color:white;font-weight: bolder;">VANCOUVER</span></a></div>
+  <div class="filterDiv is"><a href="palau.html"><span style="color:white;font-weight: bolder;">PALAU</span></a></div>
+  <div class="filterDiv is"><a href="fraz.html"><span style="color:white;font-weight: bolder;">FRAZER ISLANDS</span></a></div>
+  
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>

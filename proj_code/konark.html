@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+*{margin: 0;padding: 0;}
+body{height: 100vh;background-size: cover;background-position: center;}
+</style>
+</head>
+
+<body background="F:\sublime\mini project 2\rel.jpg">
+<h2 class="w3-center" style="margin-left:32px;color: black;font-weight: bold;font-size: 35px;font-style: italic;;"><BR>Konark(The Sun Temple) - Odisha</h2><BR><BR>
+<div class="w3-content w3-section" style="margin-left:25%;width:1000px">
+  <img class="mySlides" src="F:\sublime\mini project 2\ko1.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\ko2.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\ko3.jpg" style="height:600px;width: 1000px;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<p style="margin-left: 10px;font-style:italic;font-family: cursive;font-size:30px;color:blue;margin-top: 20px;font-weight: bolder">Konark Sun Temple is a 13th-century CE (year 1250) Sun temple at Konark about 35 kilometres (22 mi) northeast from Puri on the coastline of Odisha, India. The temple is attributed to king Narasimhadeva I of the Eastern Ganga Dynasty about 1250 CE.<br><br>Dedicated to the Hindu Sun God Surya, what remains of the temple complex has the appearance of a 100-foot (30 m) high chariot with immense wheels and horses, all carved from stone. Once over 200 feet (61 m) high,much of the temple is now in ruins, in particular the large shikara tower over the sanctuary; at one time this rose much higher than the mandapa that remains. The structures and elements that have survived are famed for their intricate artwork, iconography, and themes, including erotic kama and mithuna scenes. Also called the Surya Devalaya, it is a classic illustration of the Odisha style of Architecture or Kalinga Architecture.<br><br>The cause of the destruction of the Konark temple is unclear and still remains a source of controversy. Theories range from natural damage to deliberate destruction of the temple in the course of being sacked several times by Muslim armies between the 15th and 17th centuries. This temple was called the "Black Pagoda" in European sailor accounts as early as 1676 because it looked a great tiered tower which appeared black.Similarly, the Jagannath Temple in Puri was called the "White Pagoda". Both temples served as important landmarks for sailors in the Bay of Bengal.The temple that exists today was partially restored by the conservation efforts of British India-era archaeological teams. Declared a UNESCO world heritage site in 1984,it remains a major pilgrimage site for Hindus, who gather here every year for the Chandrabhaga Mela around the month of February.<br><br>Konark Sun Temple is depicted on the reverse side of the Indian currency note of 10 rupees to signify its importance to Indian cultural heritage.<br><br></p>
+</body>
+</html>

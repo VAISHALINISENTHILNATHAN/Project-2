@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+*{margin: 0;padding: 0;}
+body{height: 100vh;background-size: cover;background-position: center;}
+</style>
+</head>
+
+<body background="F:\sublime\mini project 2\an.jpg">
+<h2 class="w3-center" style="margin-left:35px;color: black;font-weight: bold;font-size: 50px;font-style: italic;;"><br>Andhra Pradesh & Karnataka</h2><BR>
+<div class="w3-content w3-section" style="margin-left:30%;width:1000px">
+  <img class="mySlides" src="F:\sublime\mini project 2\ak1.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\ak2.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\ak3.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\ak4.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\ak5.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\ak6.jpg" style="height:600px;width: 1000px;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<a href="http://www.aptourism.gov.in"><span style="color:blue;float: left;margin-left: 25px;font-size: 30px;font-weight: bolder;font-style: italic;">ANDHRA PRADESH-OFFICIAL SITE!!!for more details login</span></a><BR><BR><br>
+<a href="https://www.kstdc.co"><span style="color:blue;float: left;margin-left:25px;font-size: 30px;font-weight: bolder;font-style: italic;">KARNATAKA-OFFICIAL SITE!!!for more details login</span></a>
+</body>
+</html>

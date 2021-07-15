@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+*{margin: 0;padding: 0;}
+body{height: 100vh;background-size: cover;background-position: center;}
+</style>
+</head>
+
+<body background="F:\sublime\mini project 2\cn.jpg">
+<h2 class="w3-center" style="margin-left:35px;color:white;font-weight: bold;font-size: 50px;font-style: italic;"><BR>Canada</h2>
+<video width="900" height="600" controls style="margin-left:35px;">
+  <source src="F:\sublime\mini project 2\canada.mp4" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+<div class="w3-content w3-section" style="margin-left:50%;width:1000px">
+  <img class="mySlides" src="F:\sublime\mini project 2\cn1.jpg" style="height:600px;width: 900px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\cn2.jpg" style="height:600px;width: 900px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\cn3.jpg" style="height:600px;width: 900px;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<p style="margin-left: 10px;font-style:italic;font-family: cursive;font-size:30px;color:blue;margin-top: 20px;font-weight: bolder"><mark>Canada is a country in North America. Its ten provinces and three territories extend from the Atlantic to the Pacific and northward into the Arctic Ocean, covering 9.98 million square kilometres (3.85 million square miles), making it the world's second-largest country by total area. Its southern and western border with the United States, stretching 8,891 kilometres (5,525 mi), is the world's longest bi-national land border. Canada's capital is Ottawa, and its three largest metropolitan areas are Toronto, Montreal, and Vancouver.</mark></p>
+</body>
+</html>

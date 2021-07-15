@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>climate</title>
+</head>
+<SCRIPT type="text/javascript">
+  function JavaBlink() {
+     var blinks = document.getElementsByTagName('JavaBlink');
+     for (var i = blinks.length - 1; i >= 0; i--) {
+        var s = blinks[i];
+        s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
+     }
+     window.setTimeout(JavaBlink,500);
+  }
+  if (document.addEventListener) document.addEventListener("DOMContentLoaded", JavaBlink, false);
+  else if (window.addEventListener) window.addEventListener("load", JavaBlink, false);
+  else if (window.attachEvent) window.attachEvent("onload", JavaBlink);
+  else window.onload = JavaBlink;
+
+  function myFunction() {
+  var number = document.getElementById("myInput").value;
+  var text;
+  if (number <26) {
+    text = "low a/g ratio!!!";
+    window.open("hot.html")
+  } else {
+    text ="high a/g ratio!!!";
+    window.open("cold.html")
+  }
+  document.getElementById("demo").innerHTML = text;
+}	
+</SCRIPT>
+<style>
+	*{padding: 0;margin: 0;box-sizing: border-box;}
+	body{height: 100vh;background-size: cover;background-position: center;}
+	ul.set1{float: left;list-style-type: none;margin-top:90px;margin-left:30%;}
+	ul.set1 li{display: inline-block;}
+	ul.set1 li a{font-family:sans-serif;font-size:40px;text-decoration: none;padding:10px 30px;border: 3px solid blue;transition: 0.4s ease;font-weight: bold;background-color: #cce6ff;}
+	ul.set1 li a:hover{background-color: white;color:red;}
+	ul{float: right;list-style-type: none;margin-top: 2px;margin-right: 25px;}
+	ul li{display: inline-block;}
+	ul li a{font-family:cursive;font-size:20px;text-decoration: none;color:#4dff4d;padding:10px 30px;border: 3px solid transparent;transition: 0.4s ease;}
+	ul li a:hover{background-color: white;color:red;}
+	ul li.active2 a{background-color: white;color:red;}
+</style>
+<body background="F:\sublime\mini project 2\bg2.jpg">
+	<header>
+		<div class="info">
+			<br><r><br>
+			<li><a href="main.html"><span style="color:white;float: left;margin-left: 25px;font-size: 30px;font-weight: bolder;font-style: italic;">GLOBAL TOURISMS</span></a></li>
+			<p align="center" style="font-style:italic;font-family: cursive;font-size:30px;font-color:white;margin-top: 20px;font-weight: bolder">Dear traveller,please choose the climate that suits your journey!!</p>
+			<ul class="set1">
+				<li><a href="cold.html"><span style="color: blue;">COLD ZONES FOR SUMMERS</span></a></li>
+				<li><a href="hot.html"><span style="color: blue;">HOT ZONES FOR WINTERS</span></a></li>
+			</ul>
+			
+		</div>
+	</header>
+	<p align="center" style="font-style:italic;font-family: cursive;font-size:45px;color:#00ff00;margin-top:20%;font-weight: bolder">Temperature</p><br>
+<p align="center" style="font-style:italic;font-family: cursive;font-size:30px;color:white;font-weight: bolder"><JavaBlink>Salem -27 degree celsius -- Tour an hot zone</JavaBlink></p><BR><BR>
+<p align="center" style="font-family: sans-serif;font-style: italic;font-weight: bold;color:red;font-size: 30px;"> <mark>ENTER THE TEMPERATURE VALUE IN CELSIUS OF YOUR CURRENT LOCATION</mark></p><br><br>
+<input id="myInput" type="text" style="margin-left:40%;font-family: sans-serif;font-style: italic;font-weight: bold;color: #330000;font-size: 30px; ">
+<button onclick="myFunction()" style="margin-left: 45%;margin-top:2%;font-family: sans-serif;font-style: italic;font-weight:bold;color:#cc00ff;font-size:25px;border:1px solid #660080;width:200px;">Get Preferance</button>
+<p id="demo"></p>
+</body>
+</html>

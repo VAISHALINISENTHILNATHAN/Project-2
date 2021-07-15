@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+*{margin: 0;padding: 0;}
+body{height: 100vh;background-size: cover;background-position: center;}
+</style>
+</head>
+
+<body background="F:\sublime\mini project 2\sn.jpg">
+<h2 class="w3-center" style="margin-left:35px;color: black;font-weight: bold;font-size: 35px;font-style: italic;;"><br>Conoor - Tamilnadu</h2><BR>
+<div class="w3-content w3-section" style="margin-left:30%;width:1000px">
+  <img class="mySlides" src="F:\sublime\mini project 2\co1.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\co2.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\co3.jpg" style="height:600px;width: 1000px;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<p style="margin-left: 10px;font-style:italic;font-family: cursive;font-size:30px;color:blue;margin-top: 20px;font-weight: bolder">Coonoor is a Taluk and a municipality of the Nilgiris district in the Indian State of Tamil Nadu. As of 2011, the town had a population of 45,494.<br><br>Spread over an area of 12 hectares, Sim's Park has a collection of over 1,000 plant species. The botanical garden is partly developed in the Japanese style and derived its name from J. D. Sim, the secretary of the Madras Club in 1874. The key attraction of the park is the annual fruit and vegetable show held in May.[4][5] Dolphin's Nose Viewpoint is 10 km from Coonoor and provides a panoramic view of the vast expanse of the Nilgiri Hills and Catherine Falls. Tourists can trek from Lady Canning's Seat to Dolphin's Nose. Lamb's Rock, about 5½ km from Coonoor, is another vantage point. Droog Fort is located a distance of 13 km from Coonoor and was once used by Tipu Sultan in the 18th century. Law's Falls is a waterfall located 5 km from Coonoor, on the way to Mettupalayam.
+<br><br>Pomological Station is a research center of the State Agricultural Department for persimmon, pomegranates and apricot. Pasteur Institute located near Sim's park, was started in 1907. This institute develops vaccination for rabies. Central Silk Board has its silkworm breeding station (Satellite Silkworm Breeding Station of Central Sericultural Research & Training Institute-Mysuru) besides state government silk farm at Springfield. Recently, Floriculture and strawberry cultivation have taken root.</p>
+</body>
+</html>

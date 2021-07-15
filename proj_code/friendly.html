@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<style>
+*{margin: 0;padding: 0;}
+body{height: 100vh;background-size: cover;background-position: center;}
+.filterDiv {float: left;background-color:#4d3900;color:white;font-size: 20px;font-weight: bolder;width:200px ;line-height: 100px;text-align: center;margin:10px;display: none;}
+.show {display:block;}
+.container {margin-top:450px;overflow: hidden;}
+.btn {margin-top: 40px;border:50px;outline:black;padding: 20px 40px;background-color:#ffccff;cursor: pointer;font-size: 20px;font-weight: bolder;}
+.btn:hover {background-color: #f1f1f1; ;}
+.btn.active {background-color: #666;color: white;}
+</style>
+<body background="F:\sublime\mini project 2\ind.jpg">
+<BR><BR><BR>
+<li><a href="main.html"><span style="color:black;float: left;margin-left: 25px;font-size: 30px;font-weight: bolder;font-style: italic;">GLOBAL TOURISMS</span></a></li>
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('go')">GOA</button>
+  <button class="btn" onclick="filterSelection('tn')">TAMILNADU</button>
+  <button class="btn" onclick="filterSelection('kl')"> KERALA</button>
+  <button class="btn" onclick="filterSelection('ka')">KARNATKA</button>
+  <button class="btn" onclick="filterSelection('ap')">ANDHRA PRADESH</button>
+  <button class="btn" onclick="filterSelection('kkr')">WEST BENGAL</button>
+</div>
+<div class="container">
+  <div class="filterDiv tn"><a href="chennai.html"><span style="color:white;font-weight: bolder;">CHENNAI</span></a></div>
+  <div class="filterDiv tn"><a href="kanya.html"><span style="color:white;font-weight: bolder;">KANYAKUMARI</span></a></div>
+  <div class="filterDiv tn"><a href="madur.html"><span style="color:white;font-weight: bolder;">MADURAI</span></a></div>
+  <div class="filterDiv kl"><a href="kochi.html"><span style="color:white;font-weight: bolder;">KOCHI</span></a></div>
+  <div class="filterDiv kl"><a href="triva.html"><span style="color:white;font-weight: bolder;">TRIVANDRUM</span></a></div>
+  <div class="filterDiv kl"><a href="malab.html"><span style="color:white;font-weight: bolder;">MALABAR</span></a></div>
+  <div class="filterDiv ka"><a href="hampi.html"><span style="color:white;font-weight: bolder;">HAMPI</span></a></div>
+  <div class="filterDiv ka"><a href="wayanad.html"><span style="color:white;font-weight: bolder;">WAYANAD</span></a></div>
+  <div class="filterDiv ka"><a href="bang.html"><span style="color:white;font-weight: bolder;">BANGALORE</span></a></div>
+  <div class="filterDiv ap"><a href="hyder.html"><span style="color:white;font-weight: bolder;">HYDERABAD</span></a></div>
+  <div class="filterDiv ap"><a href="mysore.html"><span style="color:white;font-weight: bolder;">MYSORE</span></a></div>
+  <div class="filterDiv ap"><a href="vizag.html"><span style="color:white;font-weight: bolder;">VIZAG</span></a></div>
+  <div class="filterDiv kkr"><a href="sunder.html"><span style="color:white;font-weight: bolder;">SUNDERBANS</span></a></div>
+  <div class="filterDiv kkr"><a href="kolkata.html"><span style="color:white;font-weight: bolder;">KOLKATA</span></a></div>
+  <div class="filterDiv go"><a href="goa.html"><span style="color:white;font-weight: bolder;">GOA</span></a></div>
+</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>

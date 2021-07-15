@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+*{margin: 0;padding: 0;}
+body{height: 100vh;background-size: cover;background-position: center;}
+</style>
+</head>
+
+<body background="F:\sublime\mini project 2\re.jpg">
+<h2 class="w3-center" style="margin-left:35px;color:white;font-weight: bold;font-size: 35px;font-style: italic;"><BR>Hyderabad - Telangana</h2><BR>
+<div class="w3-content w3-section" style="margin-left:30%;width:1000px">
+  <img class="mySlides" src="F:\sublime\mini project 2\hy1.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\hy2.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\hy3.jpg" style="height:600px;width: 1000px;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<a href="https://tourism.telangana.gov.in/home"><span style="color:#1ab2ff;float: left;margin-left: 25px;font-size: 30px;font-weight: bolder;font-style: italic;">HYDERABAD-OFFICIAL SITE <-- for more details login</span></a><br><br>
+<p style="font-style:italic;font-family: cursive;font-size:30px;color:white;margin-top: 20px;font-weight: bolder">HyderabadHY-dər-ə-bad,[6] Telugu: [ˈɦaɪ̯daraːbaːd],is the capital and largest city of the Indian state of Telangana and the de jure capital of Andhra Pradesh.It occupies 650 square kilometres (250 sq mi) on the Deccan Plateau along the banks of the Musi River, in the northern part of South India. With an average altitude of 542 metres (1,778 ft), much of Hyderabad is situated on hilly terrain around artificial lakes, including the Hussain Sagar lake, predating the city's founding, in the north of the city centre. According to the 2011 Census of India, Hyderabad is the fourth-most populous city in India with a population of 6.9 million residents within the city limits, and has a population of 9.7 million residents in the metropolitan region, making it the sixth-most populous metropolitan area in India. With an output of US$74 billion, Hyderabad has the fifth-largest urban economy in India.<br><br></p>
+</body>
+</html>

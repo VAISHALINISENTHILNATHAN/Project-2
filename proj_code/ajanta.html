@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+*{margin: 0;padding: 0;}
+body{height: 100vh;background-size: cover;background-position: center;}
+</style>
+</head>
+
+<body background="F:\sublime\mini project 2\his.jpg">
+<h2 class="w3-center" style="margin-left:35px;color:black;font-weight: bolder;font-size:40px;font-style: italic;;"><br>Ajanta and Ellora - Maharashtra</h2><br>
+<div class="w3-content w3-section" style="margin-left:30%;width:1000px">
+  <img class="mySlides" src="F:\sublime\mini project 2\ae1.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\ae2.jpg" style="height:600px;width: 1000px;">
+  <img class="mySlides" src="F:\sublime\mini project 2\ae3.jpg" style="height:600px;width: 1000px;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<p style="margin-left: 10px;font-style:italic;font-family: cursive;font-size:30px;color:white;margin-top: 20px;font-weight: bolder">The Buddhist Caves in Ajanta are approximately 30 rock-cut Buddhist cave monuments dating from the 2nd century BCE to about 480 CE in the Aurangabad district of Maharashtra state in India.<br> The caves include paintings and rock-cut sculptures described as among the finest surviving examples of ancient Indian art, particularly expressive paintings that present emotions through gesture, pose and form.<br><br>
+
+They are universally regarded as masterpieces of Buddhist religious art. The caves were built in two phases, the first starting around the 2nd century BCE and the second occurring from 400 to 650 CE, according to older accounts, or in a brief period of 460–480 CE according to later scholarship. The site is a protected monument in the care of the Archaeological Survey of India, and since 1983, the Ajanta Caves have been a UNESCO World Heritage Site.<br><br>
+
+The Ajanta Caves constitute ancient monasteries and worship-halls of different Buddhist traditions carved into a 75-metre (246 ft) wall of rock.The caves also present paintings depicting the past lives and rebirths of the Buddha, pictorial tales from Aryasura's Jatakamala, and rock-cut sculptures of Buddhist deities.Textual records suggest that these caves served as a monsoon retreat for monks, as well as a resting site for merchants and pilgrims in ancient India. While vivid colours and mural wall-painting were abundant in Indian history as evidenced by historical records, Caves 16, 17, 1 and 2 of Ajanta form the largest corpus of surviving ancient Indian wall-painting.
+
+
+Panoramic view of Ajanta Caves from the nearby hill
+The Ajanta Caves are mentioned in the memoirs of several medieval-era Chinese Buddhist travellers to India and by a Mughal-era official of Akbar era in the early 17th century.[14] They were covered by jungle until accidentally "discovered" and brought to Western attention in 1819 by a colonial British officer Captain John Smith on a tiger-hunting party.[15] The caves are in the rocky northern wall of the U-shaped gorge of the river Waghur,[16] in the Deccan plateau.[17][18] Within the gorge are a number of waterfalls, audible from outside the caves when the river is high.[19]
+
+With the Ellora Caves, Ajanta is one of the major tourist attractions of Maharashtra. It is about 6 kilometres (3.7 miles) from Fardapur, 59 kilometres (37 miles) from the city of Jalgaon, Maharashtra, India, 104 kilometres (65 miles) from the city of Aurangabad, and 350 kilometres (220 miles) east-northeast of Mumbai.[8][20] Ajanta is 100 kilometres (62 miles) from the Ellora Caves, which contain Hindu, Jain and Buddhist caves, the last dating from a period similar to Ajanta. The Ajanta style is also found in the Ellora Caves and other sites such as the Elephanta Caves, Aurangabad Caves, Shivleni Caves and the cave temples of Karnataka.[21]</p>
+</body>
+</html>
